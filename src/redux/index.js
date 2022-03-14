@@ -1,10 +1,11 @@
 import { applyMiddleware, combineReducers, createStore } from "redux";
-import repoReducer from "./repoReducer.js";
+import { todos, filterTodo } from "./reducers";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 
 const rootReducer = combineReducers( {
-    repos: repoReducer
+    todos,
+    filterTodo
 })
 
 export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
