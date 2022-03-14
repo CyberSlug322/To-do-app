@@ -3,7 +3,7 @@ import { fetchFakeApi } from "../redux/actions/asyncActions";
 import { connect } from "react-redux";
 
 
-const Button = ({ dispatch }) => {
+const FetchButton = ({ dispatch }) => {
 
 const onClick = () => {   
     dispatch(fetchFakeApi());
@@ -16,4 +16,4 @@ const onClick = () => {
     };
 
 
-export default connect()(Button);
+export default connect()(FetchButton);
