@@ -1,30 +1,40 @@
+import {
+  ADD_TODO,
+  TOGGLE_TODO,
+  FILTER_TODO,
+  FETCH_TODO,
+  SHOW_ACTIVE, 
+  SHOW_ALL, 
+  SHOW_COMPLETE
+} from '../constants'
+
 let nextTodoId = 0;
 
 export const addTodo = text => ({
-  type: "ADD_TODO",
+  type: ADD_TODO,
   id: nextTodoId++,
   complete: false,
   text
 });
 
 export const toggleTodo = id => ({
-  type: "TOGGLE_TODO",
+  type: TOGGLE_TODO,
   id
 });
 
 export const filter = filter => ({
-  type: "FILTER_TODO",
+  type: FILTER_TODO,
   filter
 });
 
 export const typeFilter = {
-  SHOW_COMPLETE: "SHOW_COMPLETE",
-  SHOW_ACTIVE: "SHOW_ACTIVE",
-  SHOW_ALL: "SHOW_ALL"
+  SHOW_COMPLETE: SHOW_COMPLETE,
+  SHOW_ACTIVE: SHOW_ACTIVE,
+  SHOW_ALL: SHOW_ALL
 };
 
 export const fetchTodo = () => ({
-  type: "FETCH_TODO",
+  type: FETCH_TODO,
   id: nextTodoId++,
   complete: false,
   text: "toSo task from fake api"

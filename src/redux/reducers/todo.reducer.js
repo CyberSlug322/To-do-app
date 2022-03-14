@@ -1,7 +1,10 @@
+import { ADD_TODO, TOGGLE_TODO, FETCH_TODO, } from '../constants'
 
-export const todos = (state = [], action) => {
+const initialState = []
+
+export const todos = (state = initialState, action) => {
     switch (action.type) {
-      case "FETCH_TODO":
+      case FETCH_TODO:
         console.log(action)
         return [
           ...state,
@@ -11,7 +14,7 @@ export const todos = (state = [], action) => {
             text: action.text
           }
         ]
-      case "ADD_TODO":
+      case ADD_TODO:
         console.log(action)
         return [
           ...state, 
@@ -21,7 +24,7 @@ export const todos = (state = [], action) => {
             text: action.text
           }
         ];
-      case "TOGGLE_TODO":
+      case TOGGLE_TODO:
         return state.map(
           todo =>
             todo.id === action.id ? { ...todo, complete: !todo.complete } : todo
@@ -30,20 +33,3 @@ export const todos = (state = [], action) => {
         return state;
     }
   };
-
-
-
-
-
-  export const filterTodo = (state = "SHOW_ALL", action) => {
-    switch (action.type) {
-      case "FILTER_TODO":
-        return action.filter;
-      default:
-        return state;
-    }
-  };
-  
-  
-  
-  

@@ -1,5 +1,5 @@
 import React from "react";
-import { fetchFakeApi } from "../redux/asyncActions";
+import { fetchFakeApi } from "../redux/actions/asyncActions";
 import { connect } from "react-redux";
 
 
