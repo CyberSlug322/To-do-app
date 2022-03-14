@@ -8,7 +8,9 @@ const TodoList = ({ todos, toggleTodo }) => {
     <ul>
       {todos != null &&
         todos.map(todo => (
+          <li>
           <Todo key={todo.id} {...todo} onClick={() => toggleTodo(todo.id)} />
+          </li>
         ))}
     </ul>
   );

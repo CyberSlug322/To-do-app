@@ -2,10 +2,10 @@ import React from "react";
 
 const Todo = ({ text, complete, onClick }) => {
   return (
-    <li>
+    <div>
       <input type="checkbox" onChange={onClick} checked={complete} />
       {text}
-    </li>
+    </div>
   );
 };
 
