@@ -2,7 +2,7 @@ import { ADD_TODO, TOGGLE_TODO, FETCH_TODO, } from '../constants'
 
 const initialState = []
 
-export const todos = (state = initialState, action) => {
+export default (state = initialState, action) => {
     switch (action.type) {
       case FETCH_TODO:
         console.log(action)

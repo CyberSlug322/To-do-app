@@ -1,5 +1,6 @@
 import { applyMiddleware, combineReducers, createStore } from "redux";
-import { todos, filterTodo } from "./reducers";
+import filterTodo from "./reducers/filterTodo.reducer";
+import todos from "./reducers/todos.reducer";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 
