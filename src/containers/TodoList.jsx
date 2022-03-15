@@ -17,19 +17,8 @@ const TodoList = ({ todos, toggleTodo }) => {
   );
 };
 
-const filterTodos = (state) => {
-  switch (state.filterTodo) {
-    case "SHOW_COMPLETE":
-      return state.todos.filter(todo => todo.complete === true);
-    case "SHOW_ACTIVE":
-      return state.todos.filter(todo => todo.complete === false);
-    default:
-      return state.todos;
-  }
-};
-
 const mapStateToProps = state => ({
-  todos: filterTodos(state)
+  todos: filterTodosSelector(state)
 });
 
 const mapDispatchToProps = dispatch => ({
