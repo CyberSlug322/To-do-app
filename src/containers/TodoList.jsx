@@ -2,33 +2,34 @@ import React from "react";
 import Todo from "../components/Todo";
 import { connect } from "react-redux";
 import { toggleTodo } from "../redux/actions/actions";
+import { filterTodosSelector} from "../redux/selectors/selectors"
 
 const TodoList = ({ todos, toggleTodo }) => {
   return (
     <ul>
       {todos != null &&
         todos.map(todo => (
-          <li>
-          <Todo key={todo.id} {...todo} onClick={() => toggleTodo(todo.id)} />
+          <li key={todo.id}>
+          <Todo  {...todo} onClick={() => toggleTodo(todo.id)} />
           </li>
         ))}
     </ul>
   );
 };
 
-const filterTodos = (todos, filter) => {
-  switch (filter) {
+const filterTodos = (state) => {
+  switch (state.filterTodo) {
     case "SHOW_COMPLETE":
-      return todos.filter(todo => todo.complete === true);
+      return state.todos.filter(todo => todo.complete === true);
     case "SHOW_ACTIVE":
-      return todos.filter(todo => todo.complete === false);
+      return state.todos.filter(todo => todo.complete === false);
     default:
-      return todos;
+      return state.todos;
   }
 };
 
 const mapStateToProps = state => ({
-  todos: filterTodos(state.todos, state.filterTodo)
+  todos: filterTodos(state)
 });
 
 const mapDispatchToProps = dispatch => ({
