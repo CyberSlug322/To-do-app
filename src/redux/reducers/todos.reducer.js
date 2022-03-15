@@ -2,7 +2,7 @@ import { ADD_TODO, TOGGLE_TODO, FETCH_TODO, } from '../constants'
 
 const initialState = []
 
-export default (state = initialState, action) => {
+const todosReducer = (state = initialState, action) => {
     switch (action.type) {
       case FETCH_TODO:
         return [
@@ -31,3 +31,5 @@ export default (state = initialState, action) => {
         return state;
     }
   };
+
+  export default todosReducer
