@@ -1,4 +1,9 @@
+import { createSelector } from '@reduxjs/toolkit'
 import { SHOW_COMPLETE, SHOW_ACTIVE } from "../constants";
+
+const selectFilterTodo = (state) => state.filterTodo
+const selectTodos = (state) => state.selectTodos
+
 
 export const filterTodosSelector = (state) => {
     switch (state.filterTodo) {
