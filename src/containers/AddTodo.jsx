@@ -1,5 +1,5 @@
 import React from "react";
-import { addTodo } from "../redux/actions/actions";
+import { addTodo } from "../redux/actions/todos.actions";
 import { connect } from "react-redux";
 import { useState } from "react";
 

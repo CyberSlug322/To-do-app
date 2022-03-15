@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { filter } from "../redux/actions/actions";
+import { filter } from "../redux/actions/filter.actions";
 
 const Link = ({ active, children, onClick }) => {
   return (

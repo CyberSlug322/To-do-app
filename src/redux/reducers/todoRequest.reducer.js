@@ -1,4 +1,4 @@
-import { MY_FETCH_ERROR, MY_FETCH_REQUEST, MY_FETCH_SUCCESS } from '../constants'
+import { API_FETCH_ERROR, API_FETCH_REQUEST, API_FETCH_SUCCESS } from '../constants'
 
 const initialState = {
     isFetching: false,
@@ -7,12 +7,12 @@ const initialState = {
 };
 
 const todoRequestReducer = (state = initialState, action) => {
-    if (action.type === MY_FETCH_REQUEST) state.isFetching = true
-    if (action.type === MY_FETCH_SUCCESS) {
+    if (action.type === API_FETCH_REQUEST) state.isFetching = true
+    if (action.type === API_FETCH_SUCCESS) {
         state.data = [...state.data, action.data]
         state.isFetching = false
     }
-    if (action.type === MY_FETCH_ERROR) {
+    if (action.type === API_FETCH_ERROR) {
         state.errorMessage = [...state.errorMessage, action.errorMessage]
         state.isFetching = false
     }

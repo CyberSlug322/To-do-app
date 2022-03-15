@@ -1,12 +1,15 @@
-import { fetchTodo, fetchTodoError, fetchTodoRequest, fetchTodoSuccess } from "./actions"
+import {  fetchTodoError, fetchTodoRequest, fetchTodoSuccess } from "./api.actions"
 
 export const fetchFakeApi = () => async dispatch => {
    try {
-        const data = new Promise(resolve => setTimeout(() => resolve('data'), 1000))
         dispatch(fetchTodoRequest())
+        const data = new Promise(resolve => setTimeout(() => resolve({
+            id: Math.random * 100,
+            complete: false,
+            text: "its fetch todo"
+          }), 1000))
         const result = await Promise.resolve(data)
         //throw new Error("aaaa")  
-        dispatch(fetchTodo())
         dispatch(fetchTodoSuccess(result))
         
    } catch (e) {
