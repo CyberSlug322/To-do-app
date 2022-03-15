@@ -1,4 +1,4 @@
-import { ADD_TODO, TOGGLE_TODO, API_FETCH_REQUEST} from '../constants'
+import { TODO_ADD_TODO, TODO_TOGGLE_TODO, API_FETCH_REQUEST} from '../constants'
 
 
 const initialState = {nextTodoId: 0,todosArr: []}
@@ -16,7 +16,7 @@ const todosReducer = (state = initialState, action) => {
             text: "action.text"
           }
         ]}
-      case ADD_TODO:
+      case TODO_ADD_TODO:
         return {
           nextTodoId: ++state.nextTodoId,
           todosArr:[
@@ -27,7 +27,7 @@ const todosReducer = (state = initialState, action) => {
             text: action.text
           }
         ]}
-      case TOGGLE_TODO:
+      case TODO_TOGGLE_TODO:
         return {
         nextTodoId: state.nextTodoId,  
         todosArr:state.todosArr.map(
