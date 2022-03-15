@@ -7,10 +7,9 @@ const AddTodo = ({ dispatch }) => {
   const [input, setInput] = useState('')
 
   const onClick = () => {
-    if (input != "") {
+    if (input === "") return
       dispatch(addTodo(input));
       setInput('');
-    }
   };
   return (
     <>

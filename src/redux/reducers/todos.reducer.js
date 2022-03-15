@@ -5,7 +5,6 @@ const initialState = []
 export default (state = initialState, action) => {
     switch (action.type) {
       case FETCH_TODO:
-        console.log(action)
         return [
           ...state,
           {
@@ -15,7 +14,6 @@ export default (state = initialState, action) => {
           }
         ]
       case ADD_TODO:
-        console.log(action)
         return [
           ...state, 
           {

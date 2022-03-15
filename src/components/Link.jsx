@@ -14,7 +14,6 @@ const mapStateToProps = (state, ownProps) => ({
 });
 const mapDispatchToProps = (dispatch, ownProps) => ({
   onClick: () => {
-    console.log("dispatch " + ownProps.filter);
     dispatch(filter(ownProps.filter));
   }
 });

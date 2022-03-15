@@ -17,12 +17,11 @@ const TodoList = ({ todos, toggleTodo }) => {
 };
 
 const filterTodos = (todos, filter) => {
-  console.log(todos);
   switch (filter) {
     case "SHOW_COMPLETE":
-      return todos.filter(todo => todo.complete == true);
+      return todos.filter(todo => todo.complete === true);
     case "SHOW_ACTIVE":
-      return todos.filter(todo => todo.complete == false);
+      return todos.filter(todo => todo.complete === false);
     default:
       return todos;
   }
