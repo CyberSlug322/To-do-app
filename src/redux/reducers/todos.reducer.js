@@ -1,20 +1,16 @@
-import { TODO_ADD_TODO, TODO_TOGGLE_TODO, API_FETCH_REQUEST} from '../constants'
+import { TODO_ADD_TODO, TODO_TOGGLE_TODO, API_FETCH_SUCCESS} from '../constants'
 
 
 const initialState = {nextTodoId: 0,todosArr: []}
 
 const todosReducer = (state = initialState, action) => {
     switch (action.type) {
-      case API_FETCH_REQUEST:
+      case API_FETCH_SUCCESS:
         return {
           nextTodoId: ++state.nextTodoId,
           todosArr:[
           ...state.todosArr,
-          {
-            id: state.nextTodoId,
-            complete: false,
-            text: "action.text"
-          }
+          action.data
         ]}
       case TODO_ADD_TODO:
         return {
