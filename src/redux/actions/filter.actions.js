@@ -1,18 +1,18 @@
 import {
-    FILTER_FILTER_TODO,
-    FILTER_SHOW_ACTIVE, 
-    FILTER_SHOW_ALL, 
-    FILTER_SHOW_COMPLETE,
+    FILTER_TODO,
+    SHOW_ACTIVE, 
+    SHOW_ALL, 
+    SHOW_COMPLETE,
   } from '../constants' 
 
 
   export const filter = filter => ({
-    type: FILTER_FILTER_TODO,
+    type: FILTER_TODO,
     filter
   });
 
   export const typeFilter = {
-    FILTER_SHOW_COMPLETE: FILTER_SHOW_COMPLETE,
-    FILTER_SHOW_ACTIVE: FILTER_SHOW_ACTIVE,
-    FILTER_SHOW_ALL: FILTER_SHOW_ALL
+    SHOW_COMPLETE: SHOW_COMPLETE,
+    SHOW_ACTIVE: SHOW_ACTIVE,
+    SHOW_ALL: SHOW_ALL
   };

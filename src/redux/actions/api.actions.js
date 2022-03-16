@@ -1,22 +1,22 @@
 import {
-    API_FETCH_ERROR,
-    API_FETCH_REQUEST,
-    API_FETCH_SUCCESS
+    FETCH_ERROR,
+    FETCH_REQUEST,
+    FETCH_SUCCESS
   } from '../constants' 
   
   export const fetchTodoRequest = () => ({
-    type: API_FETCH_REQUEST,
+    type: FETCH_REQUEST,
     isFetching: true
   })
   
   export const fetchTodoSuccess = (data) => ({
-    type: API_FETCH_SUCCESS,
+    type: FETCH_SUCCESS,
     isFetching: false,
     data
   })
   
   export const fetchTodoError = (errorMessage) => ({
-    type: API_FETCH_ERROR,
+    type: FETCH_ERROR,
     isFetching: false,
     errorMessage
   })

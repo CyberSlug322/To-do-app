@@ -1,18 +1,18 @@
-import { TODO_ADD_TODO, TODO_TOGGLE_TODO, API_FETCH_SUCCESS} from '../constants'
+import { ADD_TODO, TOGGLE_TODO, FETCH_SUCCESS} from '../constants'
 
 
 const initialState = {nextTodoId: 0,todosArr: []}
 
 const todosReducer = (state = initialState, action) => {
     switch (action.type) {
-      case API_FETCH_SUCCESS:
+      case FETCH_SUCCESS:
         return {
           nextTodoId: ++state.nextTodoId,
           todosArr:[
           ...state.todosArr,
           action.data
         ]}
-      case TODO_ADD_TODO:
+      case ADD_TODO:
         return {
           nextTodoId: ++state.nextTodoId,
           todosArr:[
@@ -23,7 +23,7 @@ const todosReducer = (state = initialState, action) => {
             text: action.text
           }
         ]}
-      case TODO_TOGGLE_TODO:
+      case TOGGLE_TODO:
         return {
         nextTodoId: state.nextTodoId,  
         todosArr:state.todosArr.map(
