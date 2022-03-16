@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { filter } from "../redux/actions/filter.actions";
+import { enableFilter } from "../redux/actions/filter.actions";
 
 const Link = ({ active, children, onClick }) => {
   return (
@@ -14,7 +14,7 @@ const mapStateToProps = (state, ownProps) => ({
 });
 const mapDispatchToProps = (dispatch, ownProps) => ({
   onClick: () => {
-    dispatch(filter(ownProps.filter));
+    dispatch(enableFilter(ownProps.filter));
   }
 });
 

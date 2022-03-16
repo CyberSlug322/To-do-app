@@ -6,7 +6,7 @@ import {
   } from '../constants' 
 
 
-  export const filter = filter => ({
+  export const enableFilter = filter => ({
     type: FILTER_TODO,
     filter
   });
