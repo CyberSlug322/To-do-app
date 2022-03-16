@@ -1,4 +1,4 @@
-import { ADD_TODO, TOGGLE_TODO, FETCH_NEW_TODO_ITEM_SUCCESS} from '../constants'
+import { ADD_TODO, TOGGLE_TODO, FETCH_NEW_TODO_ITEM_SUCCESS} from '../action.constants'
 
 
 const initialState = {nextTodoId: 0,todosArr: []}

@@ -6,8 +6,7 @@ const fakeFetch = async() => {
         complete: false,
         text: "its fetch todo"
       }), 1000))
-    const result = await Promise.resolve(data)
-    return result
+    return data
 }
 
 export const fetchFakeApi = () => async dispatch => {

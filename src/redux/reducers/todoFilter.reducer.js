@@ -1,6 +1,7 @@
-import { FILTER_TODO, SHOW_ALL } from '../constants'
+import { Filter } from '../constants'
+import { FILTER_TODO } from '../action.constants'
 
-const initialState = SHOW_ALL;
+const initialState = Filter.SHOW_ALL;
 
 const todoFilterReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -12,5 +13,4 @@ const todoFilterReducer = (state = initialState, action) => {
   };
   
 export default todoFilterReducer
-  
   

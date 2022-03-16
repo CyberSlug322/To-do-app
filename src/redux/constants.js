@@ -1,12 +1,10 @@
-export const ADD_TODO = "todo/ADD_TODO"
-export const TOGGLE_TODO = "todo/TOGGLE_TODO"
-export const FILTER_TODO = "filter/FILTER_TODO"
-export const SHOW_COMPLETE = "filter/SHOW_COMPLETE"
-export const SHOW_ACTIVE = "filter/SHOW_ACTIVE"
-export const SHOW_ALL = "filter/SHOW_ALL"
-export const FETCH_NEW_TODO_ITEM_REQUEST = "api/FETCH_REQUEST"
-export const FETCH_NEW_TODO_ITEM_SUCCESS = "api/FETCH_SUCCESS"
-export const FETCH_NEW_TODO_ITEM_ERROR = "api/FETCH_ERROR"
+
+
+export const Filter = {
+    SHOW_ACTIVE: 'SHOW_ACTIVE',
+    SHOW_ALL: 'SHOW_ALL',
+    SHOW_COMPLETE: 'SHOW_COMPLETE'
+ }
 
 
 

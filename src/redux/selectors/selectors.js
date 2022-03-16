@@ -1,5 +1,5 @@
 import { createSelector } from '@reduxjs/toolkit'
-import { SHOW_COMPLETE, SHOW_ACTIVE } from "../constants";
+import { Filter } from "../constants";
 
 export const selectFilterTodo = (state) => state.filterTodo
 export const selectTodos = (state) => state.todos.todosArr
@@ -10,10 +10,10 @@ export const selectRequestIsFetching = createSelector(selectRequestTodos, (reque
 export const filterTodosSelector = createSelector(selectTodos, selectFilterTodo, (todos, filterTodo) => {
   console.log(todos)
     switch (filterTodo) {   
-      case SHOW_COMPLETE:
+      case Filter.SHOW_COMPLETE:
         console.log("complete")
         return todos.filter(todo => todo.complete === true);
-      case SHOW_ACTIVE:
+      case Filter.SHOW_ACTIVE:
         console.log("active")
         return todos.filter(todo => todo.complete === false);
       default:
