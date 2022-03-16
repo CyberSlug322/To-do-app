@@ -1,11 +1,11 @@
-import { ADD_TODO, TOGGLE_TODO, FETCH_SUCCESS} from '../constants'
+import { ADD_TODO, TOGGLE_TODO, FETCH_NEW_TODO_ITEM_SUCCESS} from '../constants'
 
 
 const initialState = {nextTodoId: 0,todosArr: []}
 
 const todosReducer = (state = initialState, action) => {
     switch (action.type) {
-      case FETCH_SUCCESS:
+      case FETCH_NEW_TODO_ITEM_SUCCESS:
         return {
           nextTodoId: ++state.nextTodoId,
           todosArr:[
