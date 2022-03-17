@@ -8,7 +8,6 @@ export const selectTodos = (state) => state.todos
 export const selectRequestIsFetching = createSelector(selectTodos, (todos) => todos.isFetching)
 
 export const filterTodosSelector = createSelector(selectTodosArray, selectFilterTodo, (todos, filterTodo) => {
-  console.log(todos)
     switch (filterTodo) {   
       case Filter.SHOW_COMPLETE:
         console.log("complete")

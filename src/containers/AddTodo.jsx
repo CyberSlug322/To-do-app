@@ -3,22 +3,30 @@ import { addTodo } from "../redux/actions/todos.actions";
 import { connect } from "react-redux";
 import { useState } from "react";
 
-const AddTodo = ({ dispatch }) => {
+const AddTodo = ({dispatchTodo}) => {
   const [input, setInput] = useState('')
 
-  const onClick = () => {
+  const createTodo = () => {
     if (input === "") return
-      dispatch(addTodo(input));
-      setInput('');
+      dispatchTodo(input);
+      setInput("");
   };
   return (
     <>
       <input type="text" value={input} onChange={(e) => setInput(e.target.value)} />
-      <button type="submit" onClick={onClick}>
+      <button type="submit" onClick={createTodo}>
         Add Todo
       </button>
     </>
   );
 };
 
-export default connect()(AddTodo);
+const mapStateToProps = () => ({
+  
+});
+
+const mapDispatchToProps = dispatch => ({
+  dispatchTodo: input => dispatch(addTodo(input))
+});
+
+export default connect(mapStateToProps,mapDispatchToProps)(AddTodo);
