@@ -1,7 +1,6 @@
 import { applyMiddleware, combineReducers, createStore } from "redux";
 import todoFilterReducer from "./reducers/todoFilter.reducer";
 import todosReducer from "./reducers/todos.reducer";
-import todoRequestReducer from "./reducers/todoRequest.reducer"
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 
@@ -15,8 +14,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers( {
     todos: todosReducer,
-    filterTodo: todoFilterReducer,
-    requestTodos: todoRequestReducer
+    filterTodo: todoFilterReducer
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

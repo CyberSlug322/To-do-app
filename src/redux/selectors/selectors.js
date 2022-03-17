@@ -2,12 +2,12 @@ import { createSelector } from '@reduxjs/toolkit'
 import { Filter } from "../constants";
 
 export const selectFilterTodo = (state) => state.filterTodo
-export const selectTodos = (state) => state.todos.todosArr
-export const selectRequestTodos = (state) => state.requestTodos
+export const selectTodosArray = (state) => state.todos.todosArr
+export const selectTodos = (state) => state.todos
 
-export const selectRequestIsFetching = createSelector(selectRequestTodos, (requestTodos) => requestTodos.isFetching)
+export const selectRequestIsFetching = createSelector(selectTodos, (todos) => todos.isFetching)
 
-export const filterTodosSelector = createSelector(selectTodos, selectFilterTodo, (todos, filterTodo) => {
+export const filterTodosSelector = createSelector(selectTodosArray, selectFilterTodo, (todos, filterTodo) => {
   console.log(todos)
     switch (filterTodo) {   
       case Filter.SHOW_COMPLETE:
