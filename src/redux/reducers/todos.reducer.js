@@ -1,5 +1,5 @@
-import { ADD_TODO, TOGGLE_TODO, FETCH_NEW_TODO_ITEM_SUCCESS,
-  FETCH_NEW_TODO_ITEM_ERROR, FETCH_NEW_TODO_ITEM_REQUEST, } from '../action.constants'
+import { FETCH_NEW_TODO_ITEM_SUCCESS, FETCH_NEW_TODO_ITEM_ERROR, FETCH_NEW_TODO_ITEM_REQUEST, } from '../types/api.types'
+  import { ADD_TODO, TOGGLE_TODO } from '../types/todo.types';
 
 
 const initialState = {nextTodoId: 0,todosArr: [],isFetching: false, data: [], errorMessage: []}

@@ -1,6 +1,3 @@
-export const ADD_TODO = "todo/ADD_TODO"
-export const TOGGLE_TODO = "todo/TOGGLE_TODO"
-export const FILTER_TODO = "filter/FILTER_TODO"
 export const FETCH_NEW_TODO_ITEM_REQUEST = "api/FETCH_REQUEST"
 export const FETCH_NEW_TODO_ITEM_SUCCESS = "api/FETCH_SUCCESS"
 export const FETCH_NEW_TODO_ITEM_ERROR = "api/FETCH_ERROR"

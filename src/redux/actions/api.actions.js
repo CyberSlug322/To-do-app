@@ -2,7 +2,7 @@ import {
     FETCH_NEW_TODO_ITEM_ERROR,
     FETCH_NEW_TODO_ITEM_REQUEST,
     FETCH_NEW_TODO_ITEM_SUCCESS
-  } from '../action.constants' 
+  } from '../types/api.types' 
   
   export const fetchTodoRequest = () => ({
     type: FETCH_NEW_TODO_ITEM_REQUEST,

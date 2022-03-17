@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "../components/Link";
 import './Footer.jsx'
-import { Filter } from "../redux/constants";
+import { Filter } from "../constants/constants";
 
 const Footer = () => {
   return (

@@ -1,5 +1,5 @@
 import { createSelector } from '@reduxjs/toolkit'
-import { Filter } from "../constants";
+import { Filter } from "../../constants/constants";
 
 export const selectFilterTodo = (state) => state.filterTodo
 export const selectTodosArray = (state) => state.todos.todosArr

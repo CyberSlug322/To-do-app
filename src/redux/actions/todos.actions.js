@@ -2,7 +2,7 @@
 import {
   ADD_TODO,
   TOGGLE_TODO,
-} from '../action.constants' 
+} from '../types/todo.types' 
 
 
 export const addTodo = text => ({

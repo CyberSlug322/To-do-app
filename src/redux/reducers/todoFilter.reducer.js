@@ -1,5 +1,5 @@
-import { Filter } from '../constants'
-import { FILTER_TODO } from '../action.constants'
+import { Filter } from '../../constants/constants'
+import { FILTER_TODO } from '../types/filter.types'
 
 const initialState = Filter.SHOW_ALL;
 

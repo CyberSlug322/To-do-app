@@ -1,4 +1,4 @@
-import { FILTER_TODO } from '../action.constants' 
+import { FILTER_TODO } from '../types/filter.types' 
 
 
   export const enableFilter = filter => ({
