@@ -3,12 +3,12 @@ import { addTodo } from "../redux/actions/todos.actions";
 import { connect } from "react-redux";
 import { useState } from "react";
 
-const AddTodo = ({dispatchTodo}) => {
+const AddTodo = ({addTodo}) => {
   const [input, setInput] = useState('')
 
   const createTodo = () => {
     if (input === "") return
-      dispatchTodo(input);
+      addTodo(input);
       setInput("");
   };
   return (
@@ -26,7 +26,7 @@ const mapStateToProps = () => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  dispatchTodo: input => dispatch(addTodo(input))
+  addTodo: input => dispatch(addTodo(input))
 });
 
 export default connect(mapStateToProps,mapDispatchToProps)(AddTodo);

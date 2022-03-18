@@ -4,7 +4,7 @@ import { FETCH_NEW_TODO_ITEM_SUCCESS, FETCH_NEW_TODO_ITEM_ERROR, FETCH_NEW_TODO_
 
 const initialState = {nextTodoId: 0,todosArr: [],isFetching: false, data: [], errorMessage: []}
 
-const todosReducer = (state = initialState, action) => {
+export const todosReducer = (state = initialState, action) => {
     switch (action.type) {
       case FETCH_NEW_TODO_ITEM_REQUEST:
         return {
@@ -52,4 +52,3 @@ const todosReducer = (state = initialState, action) => {
     }
   };
 
-  export default todosReducer

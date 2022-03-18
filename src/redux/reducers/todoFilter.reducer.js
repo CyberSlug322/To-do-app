@@ -3,7 +3,7 @@ import { FILTER_TODO } from '../types/filter.types'
 
 const initialState = Filter.SHOW_ALL;
 
-const todoFilterReducer = (state = initialState, action) => {
+export const todoFilterReducer = (state = initialState, action) => {
     switch (action.type) {
       case FILTER_TODO:
         return action.filter;
@@ -12,5 +12,5 @@ const todoFilterReducer = (state = initialState, action) => {
     }
   };
   
-export default todoFilterReducer
+
   
